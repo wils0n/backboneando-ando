@@ -23,6 +23,7 @@
 	<script type="text/javascript" src="/js/backbone/models/problem.js"></script>
 	<script type="text/javascript" src="/js/backbone/collections/problems.js"></script>
 	<script type="text/javascript" src="/js/backbone/views/problem.js"></script>
+	<script type="text/javascript" src="/js/backbone/views/app.js"></script>
 	<script type="text/javascript" src="/js/main.js"></script>
 </head>
 <body>
@@ -76,12 +77,20 @@
 			<span>Problemas</span>
 		</div>
 	</header>
+	<form action ="" style="display:none">
+		<p><label for="title">Titulo</label><input name="title" type="text"></p>
+		<p><label for="description">Descripcion</label><input name="description" type="text"></p>
+		<p><label for="category">Categoria</label><input name="category" type="text"></p>
+		<input type="submit" value="Publicar">
+		
+	</form>
+
 	<section class="container">
 		<div class="problem-list ">
 			
 			<div class="category">
 				Mis problemas
-				<a href="#">New</a>	
+				<a href="#" class="new-problem">New</a>	
 			</div>
 			<ul class="problem-set my-problems">
 				
@@ -170,6 +179,7 @@
 			</ul>
 		</div>
 	</section>
+
 	<script type="text/template" id="problem-template">
 		<li class="problem-item">
 			<a href="#" class="problem-title">

@@ -10,6 +10,7 @@ var http = require('http');
 var path = require('path');
 var cons = require('consolidate');
 var fs = require('fs');
+var uuid = require('node-uuid');
 var baseData = fs.readFileSync('./base-data.json').toString();
 
 var data = JSON.parse(baseData);
@@ -44,6 +45,23 @@ app.get('/problems/', function(req, res){
 	res.send(data);
 });
 
-http.createServer(app).listen(app.get('port'), function(){
+app.post('/problems', function (req, res){
+	req.body.id = uuid.v1();
+	//req.body.votes = 0;
+	// req.body.image = "/img/img3.jpg";
+	// req.body.user  = "Siedrix";
+
+	data.push(req.body);
+
+	console.log('problems::create', req.body);
+
+	io.sockets.emit('problems::create', req.body);
+
+	res.send(200, {status:"Ok", id: req.body.id});
+});
+
+var server = http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+
+var io = require('socket.io').listen(server);
