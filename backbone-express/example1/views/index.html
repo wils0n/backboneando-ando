@@ -22,8 +22,8 @@
 	<script type="text/javascript" src="/js/init.js"></script>
 	<script type="text/javascript" src="/js/backbone/models/problem.js"></script>
 	<script type="text/javascript" src="/js/backbone/collections/problems.js"></script>
-	<script type="text/javascript" src="/js/backbone/views/problem.js"></script>
-	<script type="text/javascript" src="/js/backbone/views/app.js"></script>
+	<script type="text/javascript" src="/js/backbone/views/problem-view.js"></script>
+	<script type="text/javascript" src="/js/backbone/views/app-view.js"></script>
 	<script type="text/javascript" src="/js/main.js"></script>
 </head>
 <body>
@@ -31,9 +31,10 @@
 	<header class="header relative border-bottom">
 		<div class="logo">
 			<div class="wrap center-block">
-				<figure class="image isotipo left">
+				<figure class="image left">
 					<img src="images/logo.png" alt="">
 				</figure>
+				<span class="user-state admin">Setter</span>
 				<div class="user right">
 					<figure class="avatar round left">
 						<img src="images/avatar.png" width="38" height="38" alt="@wil_jm">
@@ -86,7 +87,7 @@
 	</form>
 
 	<section class="container">
-		<div class="problem-list ">
+		<div class="problem-list my-problems-container" style="display:none">
 			
 			<div class="category">
 				Mis problemas
