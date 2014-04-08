@@ -2,7 +2,7 @@ $(document).ready(function(){
 	console.log('main.js loaded');
 	
 	var modelProblem = new Ninja.Models.Problem();
-	window.views.app = new Ninja.Views.App({model: modelProblem, el: $('body')});
+	window.views.app = new Ninja.Views.App({model: modelProblem ,el: $('body')});
 
 	window.ponyExpress = new PonyExpress({
 		io: window.location.origin
@@ -22,4 +22,5 @@ $(document).ready(function(){
 			view.$el.prependTo('.my-problems');
 	});
 	window.collections.problems.fetch();
+	
 });

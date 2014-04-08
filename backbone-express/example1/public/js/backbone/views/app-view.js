@@ -5,10 +5,11 @@ Ninja.Views.App = Backbone.View.extend({
 		//"submit form": "createProblem"
 		'mousedown .editable': 'editableClick'
 	},
-	initialize: function($el){
-		this.$el = $el;
-		_.bindAll(this, 'save');
-		this.model.bind('save', this.model.save);
+	
+	initialize: function(params){ 
+		this.$el = params.el; 
+		_.bindAll(this, 'save'); 
+		this.model.bind('save', this.model.save); 
 	},
 
     editableClick: etch.editableInit,
