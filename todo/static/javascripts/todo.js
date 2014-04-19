@@ -60,10 +60,12 @@ $(document).ready(function(){
 			if (e.keyCode != 13) return;
 			if (!inp.val()) return;
 
-			itemCollection.create({
+			var data = {
 				title: inp.val(),
-				id: itemCollection.length+1
-			});
+			};
+			item = new ItemModel(data);
+			item.save()
+			this.addOne(item);
 			inp.val('');
 		}
 
