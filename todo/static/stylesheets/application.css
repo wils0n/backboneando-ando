@@ -19,7 +19,7 @@ body {
   padding: 50px;
 }
 
-.content {
+#main-content {
   background: #fff;
   border-bottom: 3px solid #e1d9d3;
   box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
@@ -41,17 +41,18 @@ body {
   z-index: 2;
 }
 
-#new-todo{
+#new_todo{
   border: none;
   box-shadow: none;
   margin-left:50px;
   padding-left: 16px;
+  padding-top: 10px;
   z-index: 2;
   font-size: 24px
 
 }
 
-#new-todo:focus{
+#new_todo:focus{
   outline: none
 }
 

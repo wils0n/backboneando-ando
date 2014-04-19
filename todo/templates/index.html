@@ -2,7 +2,7 @@
 <html lang="en" data-framework="backbonejs">
 	<head>
 		<meta charset="utf-8">
-		<title>Backbone.js • TodoMVC</title>
+		<title>Backbone.js MyTodo</title>
 	
 		<link rel="stylesheet" href="../static/stylesheets/application.css">
 
@@ -10,36 +10,36 @@
 		<script src="../static/lib/jquery.js"></script>
 		<script src="../static/lib/underscore.js"></script>
 		<script src="../static/lib/backbone.js"></script>
+		<script src="../static/lib/backbone-tastypie.js"></script>
 		<!--<script src="lib/backbone.localStorage.js"></script>-->
-		<script src="../static/javascripts/models/todo_item.js"></script>
+		<!--<script src="../static/javascripts/models/todo_item.js"></script>
 		<script src="../static/javascripts/collections/todo_items.js"></script>
 
 		<script src="../static/javascripts/views/todo_view.js"></script>
-		<!--<script src="javascripts/views/todos_view.js"></script>-->
-		<script src="../static/javascripts/views/app_view.js"></script>
-		<!--<script src="javascripts/router.js"></script>-->
-		<script src="../static/javascripts/application.js"></script>
+		<script src="javascripts/views/todos_view.js"></script>
+		<script src="javascripts/router.js"></script>
+		<script src="../static/javascripts/main.js"></script>-->
+		<script src="../static/javascripts/todo.js"></script>
 	</head>
 
 	<body>
-		<div class="content">
-			<header id="header">
-				<input id="new-todo" placeholder="What needs to be done?" autofocus>
-			</header>
-			<div id="todo">
-				<h3 class="incompleted">
-				<input type=checkbox checked="checked"/> 
-				AAAA<a href="/#todos/1">☞</a></h3>
-				<h3 class="incompleted">
-				<input type=checkbox checked="checked"/> 
-				BBB<a href="/#todos/1">☞</a></h3>
-			</div>
+		
+		<div id="main-content">
 		</div>
+
+		<script type="text/template" id="app-template">
+			
+			<header id="header">
+				<input id="new_todo" placeholder="What needs to be done?" autofocus>
+			</header>
+			<div id="item-list"></div>
+			
+		</script>
 
 		<script type="text/template" id="item-template">
 			<h3 class="<%= status %>">
-			<input type=checkbox <%= status == "complete" ? "checked=checked" : "" %>/> 
-			<%= description %> <a href="/#todos/1">☞</a></h3>
+			<input type=checkbox <%= status == "true" ? "checked=checked" : "" %>/> 
+			<%= title %> <a href="/#todos/<%=id%>">☞</a></h3>
 		</script>
 		
 	</body>
