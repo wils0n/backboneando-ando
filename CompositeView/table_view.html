@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BACKBONE Marionette Tutorial: Collections</title>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/json2.js"></script>
+    <script src="js/vendor/underscore.js"></script>
+    <script src="js/vendor/backbone.js"></script>
+    <script src="js/vendor/backbone.marionette.js"></script>
+
+    <!--<link href="./assets/css/bootstrap.css" rel="stylesheet">
+    <link href="./assets/css/custom.css" rel="stylesheet">-->
+
+</head>
+<body>
+
+    <script id="table-template" type="text/template">
+        <thead>        
+            <tr>
+                <th>Username</th>
+                <th>Full Name</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </script>
+
+    <script id="row-template" type="text/template">
+            <td><%= username %></td>
+            <td><%= fullname %></td>
+    </script>
+    <div id="region">
+    </div>
+
+    <script src="js/table_view.js"></script>
+</body>
+</html>

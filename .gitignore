@@ -1,3 +1,4 @@
-/backbone-express/base-data.json
-/backbone-express/node_modules/*
 
+*.sqlite3
+
+node_modules/\nbower_components/
