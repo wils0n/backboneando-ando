@@ -24,15 +24,15 @@ var TableView = Backbone.Marionette.CompositeView.extend({
 var userData = [
     {
         username: "dbailey",
-        fullname: "Derick Bailey"
+        lastname: "Derick Bailey"
     },
     {
         username: "jbob",
-        fullname: "Joe Bob"
+        lastname: "Joe Bob"
     },
     {
         username: "fbar",
-        fullname: "Foo Bar"
+        lastname: "Foo Bar"
     }
 ];
     
